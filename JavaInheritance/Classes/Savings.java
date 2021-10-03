@@ -1,6 +1,6 @@
 package Classes;
 
-public class Savings extends Account{
+public final class Savings extends Account{ //Final para evitar a criacao de subclasses, pode ser usado em metodos
     
     private Double interestRate;
 

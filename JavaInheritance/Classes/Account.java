@@ -41,7 +41,7 @@ public class Account {
         return this.balance;
     }
 
-    public double withdraw(Double amount){
+    public  double withdraw(Double amount){
         double juros = 0.1*balance;
         return balance -= (amount + juros);
     }
