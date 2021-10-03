@@ -29,4 +29,8 @@ public class Savings extends Account{
         balance += balance * interestRate;
     }
 
+    @Override
+    public double withdraw(Double amount){
+        return balance -= amount;
+    }
 }

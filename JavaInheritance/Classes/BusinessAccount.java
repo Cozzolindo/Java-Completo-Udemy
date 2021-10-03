@@ -30,6 +30,12 @@ public class BusinessAccount extends Account {
         }
     }
 
+    @Override
+    public double withdraw(Double amount){
+        super.withdraw(amount);
+        return balance -= 5;
+    }
+
 
 
     

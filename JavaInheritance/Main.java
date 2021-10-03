@@ -30,5 +30,19 @@ public class Main{
             acc5.loan(200.0);
             System.out.println("Loan");
         }
+
+        //OVERRIDE:
+        acc.deposit((double) 500);
+        System.out.println("Valor atual da conta de id: " + acc.getNumber() + " e " + acc.getBalance());
+        acc.withdraw((double)250);
+        System.out.println("Valor da conta de id: " + acc.getNumber() + " apos o saque: " + acc.getBalance());
+        acc3.deposit(500.0);
+        System.out.println("Valor atual da conta de id: " + acc3.getNumber() + " e " + acc3.getBalance());
+        acc3.withdraw((double)250);
+        System.out.println("Valor da conta de id: " + acc3.getNumber() + " apos o saque: " + acc3.getBalance());
+        acc2.deposit(500.0);
+        System.out.println("Valor atual da conta de id: " + acc2.getNumber() + " e " + acc2.getBalance());
+        acc2.withdraw((double)250);
+        System.out.println("Valor da conta de id: " + acc2.getNumber() + " apos o saque: " + acc2.getBalance());
     }
 }

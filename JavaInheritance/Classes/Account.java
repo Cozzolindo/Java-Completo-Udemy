@@ -42,7 +42,8 @@ public class Account {
     }
 
     public double withdraw(Double amount){
-        return balance -= amount;
+        double juros = 0.1*balance;
+        return balance -= (amount + juros);
     }
     
     public double deposit(Double amount){
