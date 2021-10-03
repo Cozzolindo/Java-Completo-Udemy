@@ -9,7 +9,7 @@ public class Main{
 
         //UPCASTING:
 
-        Account acc1 = bacc;
+        //Account acc1 = bacc;
         Account acc2 = new BusinessAccount(1003, "Bob", 0.0, 50.0);
         Account acc3 = new Savings(1004, "Anna", 0.0, 0.01);
 
@@ -32,6 +32,7 @@ public class Main{
         }
 
         //OVERRIDE:
+        System.out.println();
         acc.deposit((double) 500);
         System.out.println("Valor atual da conta de id: " + acc.getNumber() + " e " + acc.getBalance());
         acc.withdraw((double)250);
@@ -44,5 +45,20 @@ public class Main{
         System.out.println("Valor atual da conta de id: " + acc2.getNumber() + " e " + acc2.getBalance());
         acc2.withdraw((double)250);
         System.out.println("Valor da conta de id: " + acc2.getNumber() + " apos o saque: " + acc2.getBalance());
+
+        //POLYMORPHISM:
+
+        Account x = new BusinessAccount(1150, "Carlos", 600.0, 300.0);
+        Account y = new Savings(1160, "Cristina", 300.0, 0.05);
+        System.out.println();
+        System.out.println(x.getBalance());
+        System.out.println(y.getBalance());
+        x.withdraw(300.0);
+        y.withdraw(150.0);
+        System.out.println();
+        System.out.println("Contas apos o saque:");
+        System.out.println(x.getHolder() + " " + x.getBalance());
+        System.out.println(y.getHolder() + " " + y.getBalance());
+
     }
 }
